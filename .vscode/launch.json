@@ -12,8 +12,8 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug",
-            "executable": "/Users/m/www/day-off-countdown-display/.pio/build/wemos_d1_mini32/firmware.elf",
-            "toolchainBinDir": "/Users/m/.platformio/packages/toolchain-xtensa32/bin",
+            "executable": "/Users/m/www/day-off-countdown-display/.pio/build/d1_mini_lite/firmware.elf",
+            "toolchainBinDir": "/Users/m/.platformio/packages/toolchain-xtensa/bin",
             "preLaunchTask": {
                 "type": "PlatformIO",
                 "task": "Pre-Debug"
@@ -24,8 +24,8 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug (skip Pre-Debug)",
-            "executable": "/Users/m/www/day-off-countdown-display/.pio/build/wemos_d1_mini32/firmware.elf",
-            "toolchainBinDir": "/Users/m/.platformio/packages/toolchain-xtensa32/bin",
+            "executable": "/Users/m/www/day-off-countdown-display/.pio/build/d1_mini_lite/firmware.elf",
+            "toolchainBinDir": "/Users/m/.platformio/packages/toolchain-xtensa/bin",
             "internalConsoleOptions": "openOnSessionStart"
         }
     ]

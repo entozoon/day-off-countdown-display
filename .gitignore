@@ -2,3 +2,4 @@
 *.skb
 **/.DS_STORE
 /src/secrets.h
+.pio/build
