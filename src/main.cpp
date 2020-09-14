@@ -43,7 +43,7 @@ void setup()
   delay(4000); // Always smart to delay, for microcontroller uploadery reasons
   Serial.println("Let's do this!");
 
-  chakram.setBrightness(150);
+  chakram.setBrightness(100); // 0->255
   chakram.begin();
 
   // Set the ESP8266 to be only WiFi-client, not AP as by default it does both
@@ -62,7 +62,10 @@ void setup()
 
   Serial.print("Connected as ");
   Serial.println(WiFi.localIP());
+}
 
+void loop()
+{
   WiFiClient client;
   if (!client.connect(host, 80))
   {
@@ -122,22 +125,21 @@ void setup()
     chakram.show();
   }
 
-  // Chill
-  delay(3000);
+  // // Chill
+  // delay(3000);
 
-  // Fade out hard
-  for (int i = 100; i >= 0; i--)
-  {
-    chakram.setBrightness(round(i * 1.5));
-    chakram.show();
-    delay(10);
-  }
+  // // Fade out hard
+  // for (int i = 100; i >= 0; i--)
+  // {
+  //   chakram.setBrightness(round(i * 1.5));
+  //   chakram.show();
+  //   delay(10);
+  // }
 
-  // Off all the things
-  chakramFill(0, 0, 0, 0);
-  ESP.deepSleep(0);
-}
+  // // Off all the things
+  // chakramFill(0, 0, 0, 0);
+  // ESP.deepSleep(0);
 
-void loop()
-{
+  // We're looping now, wall-mount style so just cycle every hour
+  delay(3600000);
 }
