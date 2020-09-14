@@ -1,3 +1,4 @@
 *.mtl
 *.skb
 **/.DS_STORE
+/src/secrets.h
