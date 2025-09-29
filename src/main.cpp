@@ -47,16 +47,22 @@ void setup()
   chakram.begin();
 
   // Set the ESP8266 to be only WiFi-client, not AP as by default it does both
+  WiFi.setPhyMode(WIFI_PHY_MODE_11G); // HOLY SHIT FIX
   WiFi.mode(WIFI_STA);
   WiFi.begin(ssid, password);
 
   int w = 0;
   while (WiFi.status() != WL_CONNECTED)
   {
+    Serial.print(".");
     delay(100);
     // Might as well spaz around at this point while waiting
     // chakramFill(random(0, 16), 0, 5, 0);
-    chakramFill(constrain(w * 5, 0, 100), 0, 0, 0);
+    // chakramFill(constrain(w * 5, 0, 100), 0, 0, 0);
+    // chakramFill(100, 100, 0, 0);
+    chakramFill(0, 0, 0, 0);
+    chakram.setPixelColor(w % CHAKRAM_LEDS, 100, 100, 0, 0);
+    chakram.show();
     w++;
   }
 
